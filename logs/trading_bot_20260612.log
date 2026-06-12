@@ -1,0 +1,57 @@
+2026-06-12 10:35:05 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 10:35:07 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 10:35:08 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 10:35:10 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 10:35:10 | ERROR    | trading_bot.cli | Validation failed: Symbol 'BTC' has an unexpected length (3). Typical symbols are 5-12 characters (e.g. BTCUSDT, ETHUSDT).
+2026-06-12 11:23:58 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 11:23:58 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2026-06-12 11:23:58 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2026-06-12 11:23:58 | DEBUG    | trading_bot.client | → GET /fapi/v1/ping  params={}
+2026-06-12 11:23:58 | DEBUG    | trading_bot.client | ← HTTP 200  body={}
+2026-06-12 11:23:58 | INFO     | trading_bot.client | Testnet reachable ✓
+2026-06-12 11:24:01 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 11:24:01 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2026-06-12 11:24:01 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2026-06-12 11:24:01 | DEBUG    | trading_bot.client | → GET /fapi/v2/account  params={'timestamp': 1781243641292, 'recvWindow': 5000}
+2026-06-12 11:24:01 | DEBUG    | trading_bot.client | ← HTTP 401  body={"code":-2015,"msg":"Invalid API-key, IP, or permissions for action"}
+2026-06-12 11:24:01 | ERROR    | trading_bot.cli | account command failed: [-2015] Invalid API-key, IP, or permissions for action (HTTP 401)
+2026-06-12 11:24:06 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 11:24:06 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2026-06-12 11:24:06 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2026-06-12 11:24:06 | DEBUG    | trading_bot.client | → GET /fapi/v1/ticker/price  params={'symbol': 'BTCUSDT'}
+2026-06-12 11:24:06 | DEBUG    | trading_bot.client | ← HTTP 200  body={"price":"63311.20","symbol":"BTCUSDT","time":1781243640328}
+2026-06-12 11:24:06 | INFO     | trading_bot.cli | Price fetched: BTCUSDT = 63311.2000
+2026-06-12 11:27:03 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 11:27:03 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2026-06-12 11:27:03 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2026-06-12 11:27:03 | DEBUG    | trading_bot.client | → GET /fapi/v1/ping  params={}
+2026-06-12 11:27:04 | DEBUG    | trading_bot.client | ← HTTP 200  body={}
+2026-06-12 11:27:04 | INFO     | trading_bot.client | Testnet reachable ✓
+2026-06-12 11:27:07 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 11:27:07 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2026-06-12 11:27:07 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2026-06-12 11:27:07 | DEBUG    | trading_bot.client | → GET /fapi/v2/account  params={'timestamp': 1781243827312, 'recvWindow': 5000}
+2026-06-12 11:27:07 | DEBUG    | trading_bot.client | ← HTTP 200  body={"feeTier":0,"canTrade":true,"canDeposit":true,"canWithdraw":true,"feeBurn":true,"tradeGroupId":-1,"updateTime":0,"multiAssetsMargin":false,"totalInitialMargin":"0.00000000","totalMaintMargin":"0.00000000","totalWalletBalance":"5000.00000000","totalUnrealizedProfit":"0.00000000","totalMarginBalance":"5000.00000000","totalPositionInitialMargin":"0.00000000","totalOpenOrderInitialMargin":"0.00000000","totalCrossWalletBalance":"5000.00000000","totalCrossUnPnl":"0.00000000","availableBalance":"5000.
+2026-06-12 11:27:11 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 11:27:11 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2026-06-12 11:27:11 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2026-06-12 11:27:11 | INFO     | trading_bot.orders | Preparing MARKET order: BUY BTCUSDT qty=0.01
+2026-06-12 11:27:11 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=N/A
+2026-06-12 11:27:11 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1781243831305, 'recvWindow': 5000}
+2026-06-12 11:27:11 | DEBUG    | trading_bot.client | ← HTTP 200  body={"orderId":14999741192,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"rcvUPsQzDe5cMMTtDw2uVV","price":"0.00","origQty":"0.0100","executedQty":"0.0000","cumQty":"0.0000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1781243831615}
+2026-06-12 11:27:11 | INFO     | trading_bot.client | Order accepted — orderId=14999741192 status=NEW
+2026-06-12 11:27:11 | INFO     | trading_bot.orders | MARKET order SUCCESS — orderId=14999741192 status=NEW executedQty=0.0 avgPrice=0.0
+2026-06-12 11:27:15 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 11:27:15 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2026-06-12 11:27:15 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2026-06-12 11:27:15 | INFO     | trading_bot.orders | Preparing LIMIT order: SELL BTCUSDT qty=0.01 price=68000.0 tif=GTC
+2026-06-12 11:27:15 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=SELL type=LIMIT qty=0.01 price=68000.0
+2026-06-12 11:27:15 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 68000.0, 'timeInForce': 'GTC', 'timestamp': 1781243835665, 'recvWindow': 5000}
+2026-06-12 11:27:15 | DEBUG    | trading_bot.client | ← HTTP 200  body={"orderId":14999748501,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"yDTnAm7HmqdBEvPb3u0bJx","price":"68000.00","origQty":"0.0100","executedQty":"0.0000","cumQty":"0.0000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1781243835888}
+2026-06-12 11:27:15 | INFO     | trading_bot.client | Order accepted — orderId=14999748501 status=NEW
+2026-06-12 11:27:15 | INFO     | trading_bot.orders | LIMIT order SUCCESS — orderId=14999748501 status=NEW price=68000.0 qty=0.01
+2026-06-12 11:27:18 | DEBUG    | trading_bot | Logging initialised. Log file: /Users/kawaljotsingh01/Downloads/trading_bot/logs/trading_bot_20260612.log
+2026-06-12 11:27:18 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2026-06-12 11:27:18 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2026-06-12 11:27:18 | DEBUG    | trading_bot.client | → GET /fapi/v2/account  params={'timestamp': 1781243838632, 'recvWindow': 5000}
+2026-06-12 11:27:18 | DEBUG    | trading_bot.client | ← HTTP 200  body={"feeTier":0,"canTrade":true,"canDeposit":true,"canWithdraw":true,"feeBurn":true,"tradeGroupId":-1,"updateTime":0,"multiAssetsMargin":false,"totalInitialMargin":"31.67283531","totalMaintMargin":"2.53382682","totalWalletBalance":"4999.74650081","totalUnrealizedProfit":"-0.29129384","totalMarginBalance":"4999.45520697","totalPositionInitialMargin":"31.67283531","totalOpenOrderInitialMargin":"0.00000000","totalCrossWalletBalance":"4999.74650081","totalCrossUnPnl":"-0.29129384","availableBalance":"4

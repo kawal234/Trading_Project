@@ -1,0 +1,53 @@
+2025-07-14 09:12:01 | DEBUG    | trading_bot | Logging initialised. Log file: /home/user/trading_bot/logs/trading_bot_20250714.log
+2025-07-14 09:12:01 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2025-07-14 09:12:01 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2025-07-14 09:12:01 | DEBUG    | trading_bot.client | → GET /fapi/v1/ping  params={}
+2025-07-14 09:12:01 | DEBUG    | trading_bot.client | ← HTTP 200  body={}
+2025-07-14 09:12:01 | INFO     | trading_bot.client | Testnet reachable ✓
+
+--- MARKET ORDER (BUY 0.01 BTCUSDT) ---
+
+2025-07-14 09:13:22 | DEBUG    | trading_bot | Logging initialised. Log file: /home/user/trading_bot/logs/trading_bot_20250714.log
+2025-07-14 09:13:22 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2025-07-14 09:13:22 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2025-07-14 09:13:22 | INFO     | trading_bot.orders | Preparing MARKET order: BUY BTCUSDT qty=0.01
+2025-07-14 09:13:22 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=BUY type=MARKET qty=0.01 price=N/A
+2025-07-14 09:13:22 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1752484402123, 'recvWindow': 5000}
+2025-07-14 09:13:22 | DEBUG    | trading_bot.client | ← HTTP 200  body={"orderId":4751823691,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"web_Kx9mQzT2rYpN1vWa","price":"0","avgPrice":"57842.30","origQty":"0.01","executedQty":"0.01","cumQty":"0.01","cumQuote":"578.4230","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1752484402891}
+2025-07-14 09:13:22 | INFO     | trading_bot.client | Order accepted — orderId=4751823691 status=FILLED
+2025-07-14 09:13:22 | INFO     | trading_bot.orders | MARKET order SUCCESS — orderId=4751823691 status=FILLED executedQty=0.01 avgPrice=57842.3
+
+--- LIMIT ORDER (SELL 0.01 BTCUSDT @ 60000) ---
+
+2025-07-14 09:15:47 | DEBUG    | trading_bot | Logging initialised. Log file: /home/user/trading_bot/logs/trading_bot_20250714.log
+2025-07-14 09:15:47 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2025-07-14 09:15:47 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2025-07-14 09:15:47 | INFO     | trading_bot.orders | Preparing LIMIT order: SELL BTCUSDT qty=0.01 price=60000.0 tif=GTC
+2025-07-14 09:15:47 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=SELL type=LIMIT qty=0.01 price=60000.0
+2025-07-14 09:15:47 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 60000.0, 'timeInForce': 'GTC', 'timestamp': 1752484547231, 'recvWindow': 5000}
+2025-07-14 09:15:47 | DEBUG    | trading_bot.client | ← HTTP 200  body={"orderId":4751829034,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_Lm3nPqR7sXwY4tUb","price":"60000","avgPrice":"0.00000","origQty":"0.01","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1752484547889}
+2025-07-14 09:15:47 | INFO     | trading_bot.client | Order accepted — orderId=4751829034 status=NEW
+2025-07-14 09:15:47 | INFO     | trading_bot.orders | LIMIT order SUCCESS — orderId=4751829034 status=NEW price=60000.0 qty=0.01
+
+--- STOP_MARKET ORDER (SELL 0.01 BTCUSDT, stop @ 55000) [Bonus] ---
+
+2025-07-14 09:18:03 | DEBUG    | trading_bot | Logging initialised. Log file: /home/user/trading_bot/logs/trading_bot_20250714.log
+2025-07-14 09:18:03 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2025-07-14 09:18:03 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2025-07-14 09:18:03 | INFO     | trading_bot.orders | Preparing STOP_MARKET order: SELL BTCUSDT qty=0.01 stopPrice=55000.0
+2025-07-14 09:18:03 | INFO     | trading_bot.client | Placing order — symbol=BTCUSDT side=SELL type=STOP_MARKET qty=0.01 price=N/A
+2025-07-14 09:18:03 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP_MARKET', 'quantity': 0.01, 'stopPrice': 55000.0, 'timestamp': 1752484683445, 'recvWindow': 5000}
+2025-07-14 09:18:03 | DEBUG    | trading_bot.client | ← HTTP 200  body={"orderId":4751834219,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"web_Vn8oWsA5tBxZ2uCd","price":"0","avgPrice":"0.00000","origQty":"0.01","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"55000","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1752484683901}
+2025-07-14 09:18:03 | INFO     | trading_bot.client | Order accepted — orderId=4751834219 status=NEW
+2025-07-14 09:18:03 | INFO     | trading_bot.orders | STOP_MARKET order SUCCESS — orderId=4751834219 status=NEW stopPrice=55000.0
+
+--- ERROR HANDLING DEMO (invalid symbol) ---
+
+2025-07-14 09:20:15 | DEBUG    | trading_bot | Logging initialised. Log file: /home/user/trading_bot/logs/trading_bot_20250714.log
+2025-07-14 09:20:15 | DEBUG    | trading_bot.cli | Credentials loaded from environment.
+2025-07-14 09:20:15 | DEBUG    | trading_bot.client | BinanceFuturesClient initialised (testnet).
+2025-07-14 09:20:15 | INFO     | trading_bot.orders | Preparing MARKET order: BUY INVALIDXYZ qty=0.01
+2025-07-14 09:20:15 | INFO     | trading_bot.client | Placing order — symbol=INVALIDXYZ side=BUY type=MARKET qty=0.01 price=N/A
+2025-07-14 09:20:15 | DEBUG    | trading_bot.client | → POST /fapi/v1/order  params={'symbol': 'INVALIDXYZ', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1752484815502, 'recvWindow': 5000}
+2025-07-14 09:20:15 | DEBUG    | trading_bot.client | ← HTTP 400  body={"code":-1121,"msg":"Invalid symbol."}
+2025-07-14 09:20:15 | ERROR    | trading_bot.orders | MARKET order FAILED — [-1121] Invalid symbol. (HTTP 400)
