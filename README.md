@@ -49,8 +49,8 @@ trading_bot/
 
 ```bash
 # If cloned from GitHub:
-git clone https://github.com/<your-username>/trading_bot.git
-cd trading_bot
+git clone https://github.com/kawal234/Trading_Project.git
+cd Trading_Project
 ```
 
 ### 3. Create a virtual environment and install dependencies
